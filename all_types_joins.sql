@@ -7,8 +7,13 @@ insert into mydept values(3,'hr','nagpur');
 insert into myyemp values(1,'priti','technical',1);
 insert into myyemp values(2,'mohini','functional',2);
 insert into myyemp values(3,'rajat','dba',3);
+insert into myyemp values(4,'mohini','technical',4);
 select * from mydept;
 select * from myyemp;
+--joins by using + right
+select * from mydept,myyemp where mydept.did(+)=myyemp.did;
+--joins by using + left
+select * from mydept,myyemp where mydept.did=myyemp.did(+);
 --equi join
 select dname,city,ename,desg from mydept,myyemp where mydept.did=myyemp.did;
 --non-equi join
