@@ -8,6 +8,7 @@ select count(eid),email,enm from exemp group by enm,email;
 --without function
 select email,enm from exemp group by email,enm;
 --having clause
+select count(eid),enm from exemp group by enm having max(esal)>=40000 ;
 select * from exemp order by eid;
 --by default its ascending
 select * from exemp order by eid asc;
